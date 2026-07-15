@@ -201,7 +201,7 @@ function Home() {
               <ul className="contact-card__list">
                 <li>📧 cky0u0@gmail.com</li>
                 <li>📱 010-9084-8074</li>
-                <li>🔗<a href="https://github.com/cky0u0-ctrl">https://github.com/cky0u0-ctrl</a> </li>
+                <li>🔗 github.com/choi-kiyeon</li>
               </ul>
             </div>
           </div>

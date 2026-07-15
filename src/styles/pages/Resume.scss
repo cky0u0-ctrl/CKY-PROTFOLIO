@@ -73,6 +73,7 @@
 .resume-header__tagline {
   font-size: 1.05rem; line-height: 1.8; color: var(--muted);
 }
+.resume-header__tagline strong { color: var(--purple-deep); font-weight: 800; }
 
 .resume-contact-card {
   background: linear-gradient(135deg, #f5f3ff, #fff0fa);
