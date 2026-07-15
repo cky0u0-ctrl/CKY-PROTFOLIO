@@ -58,8 +58,7 @@ function Resume() {
               <span className="resume-header__name-en">Choi Ki Yeon</span>
             </h1>
             <p className="resume-header__tagline">
-              <strong>AI를 적극 활용하는 웹디자인 퍼블리셔</strong>로서,<br />
-              사용자의 손끝에서 시작되는 경험을 코드로 완성합니다
+              사용자의 손끝에서 시작되는 경험을 <strong>코드로 완성하는 웹퍼블리셔</strong> 입니다
             </p>
           </div>
           <div className="resume-header__right">
@@ -91,7 +90,7 @@ function Resume() {
               </h2>
               <div className="resume-intro">
                 <p>
-                  <strong>AI를 적극 활용하는 웹디자인 퍼블리셔</strong>로서, ChatGPT·Claude 등을
+                  <strong>AI를 적극 활용하는 웹퍼블리셔</strong>로서, ChatGPT·Claude 등을
                   실무에 접목해 디자인 구현 속도와 코드 품질을 동시에 끌어올리고 있습니다.
                 </p>
                 <p>
