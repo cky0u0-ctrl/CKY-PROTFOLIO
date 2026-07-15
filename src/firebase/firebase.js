@@ -12,7 +12,21 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
-const app = initializeApp(firebaseConfig);
+let app = null;
+let auth = null;
+let db = null;
+export const firebaseReady = !!firebaseConfig.apiKey;
 
-export const auth = getAuth(app);
-export const db = getFirestore(app);
+if (firebaseReady) {
+  try {
+    app = initializeApp(firebaseConfig);
+    auth = getAuth(app);
+    db = getFirestore(app);
+  } catch (err) {
+    console.warn('Firebase 초기화 실패 — 로그인/게시판 기능이 비활성화됩니다.', err);
+  }
+} else {
+  console.warn('Firebase 환경변수가 설정되지 않았습니다 — 배포 플랫폼(Vercel 등)의 Environment Variables에 REACT_APP_FIREBASE_* 값을 등록해주세요.');
+}
+
+export { auth, db };

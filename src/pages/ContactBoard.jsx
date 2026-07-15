@@ -23,6 +23,7 @@ function ContactBoard() {
 
   /* 인증 상태 */
   useEffect(() => {
+    if (!auth) return;
     const unsub = onAuthStateChanged(auth, u => setUser(u));
     return unsub;
   }, []);
@@ -33,6 +34,7 @@ function ContactBoard() {
   }, []);
 
   const fetchPosts = async () => {
+    if (!db) return;
     try {
       const q = query(collection(db, 'contacts'), orderBy('createdAt', 'desc'));
       const snap = await getDocs(q);
@@ -43,6 +45,7 @@ function ContactBoard() {
   /* 글 작성 */
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!auth || !db) { alert('게시판 기능이 아직 설정 중입니다. 잠시 후 다시 시도해주세요.'); return; }
     if (!user) { navigate('/auth'); return; }
     try {
       await addDoc(collection(db, 'contacts'), {
@@ -63,6 +66,7 @@ function ContactBoard() {
 
   /* 좋아요 토글 */
   const toggleLike = async (post) => {
+    if (!auth || !db) return;
     if (!user) { navigate('/auth'); return; }
     const ref = doc(db, 'contacts', post.id);
     const liked = post.likes?.includes(user.uid);

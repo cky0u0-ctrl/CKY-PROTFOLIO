@@ -22,6 +22,11 @@ function Auth() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(''); setLoading(true);
+    if (!auth || !db) {
+      setError('로그인 기능이 아직 설정 중입니다. 잠시 후 다시 시도해주세요.');
+      setLoading(false);
+      return;
+    }
     try {
       if (mode === 'signup') {
         const cred = await createUserWithEmailAndPassword(auth, email, password);
