@@ -1,0 +1,237 @@
+.resume-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 84px 0 4rem;
+  background: var(--white);
+  overflow: hidden;
+}
+
+/* 배경 */
+.resume-blob {
+  position: absolute; border-radius: 50%;
+  pointer-events: none; z-index: 0;
+}
+.resume-blob--1 {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(255,206,243,.4) 0%, transparent 70%);
+  top: -100px; right: -100px;
+}
+.resume-blob--2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(202,187,233,.35) 0%, transparent 70%);
+  bottom: 0; left: -80px;
+}
+.resume-bg-text {
+  position: absolute;
+  font-size: clamp(8rem, 18vw, 16rem);
+  font-weight: 900;
+  color: rgba(202,187,233,.08);
+  letter-spacing: -.05em;
+  right: -2rem; top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; z-index: 0; user-select: none;
+}
+
+.resume-inner {
+  position: relative; z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+/* ── 헤더 */
+.resume-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(202,187,233,.3);
+}
+.resume-header__eyebrow {
+  font-size: .72rem; font-weight: 800;
+  letter-spacing: .2em; color: var(--purple-mid);
+  margin-bottom: .75rem;
+}
+.resume-header__name {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 900; letter-spacing: -.03em; line-height: 1;
+  background: linear-gradient(135deg, var(--pink-deep), var(--purple-mid));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: .75rem;
+  display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap;
+}
+.resume-header__name-en {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 600; color: var(--muted);
+  -webkit-text-fill-color: var(--muted);
+  letter-spacing: -.01em;
+}
+.resume-header__tagline {
+  font-size: 1.05rem; line-height: 1.8; color: var(--muted);
+}
+
+.resume-contact-card {
+  background: linear-gradient(135deg, #f5f3ff, #fff0fa);
+  border: 1.5px solid rgba(202,187,233,.5);
+  border-radius: 24px;
+  padding: 2rem 2.5rem;
+}
+.resume-contact-card__apply {
+  display: flex; align-items: center; gap: .75rem;
+  margin-bottom: 1.25rem;
+  font-size: .9rem; font-weight: 700;
+}
+.resume-contact-card__field-tag {
+  background: var(--pink); color: var(--pink-hot);
+  font-size: .7rem; font-weight: 800;
+  padding: .25rem .8rem; border-radius: 50px;
+}
+.resume-contact-list {
+  list-style: none;
+  display: flex; flex-direction: column; gap: .6rem;
+}
+.resume-contact-list li {
+  font-size: .9rem; color: var(--muted);
+  display: flex; align-items: center; gap: .6rem;
+}
+
+/* ── 본문 그리드 */
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ── 섹션 공통 */
+.resume-section { margin-bottom: 2.5rem; }
+.resume-section__title {
+  display: flex; align-items: center; gap: .6rem;
+  font-size: 1.2rem; font-weight: 900;
+  letter-spacing: -.02em;
+  margin-bottom: 1.25rem;
+  padding-bottom: .6rem;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, var(--pink-deep), var(--purple-mid)) 1;
+}
+.resume-section__icon { font-size: 1.1rem; }
+
+/* ── 자기소개 */
+.resume-intro p {
+  font-size: .95rem; line-height: 1.9;
+  color: var(--muted); margin-bottom: .85rem;
+}
+.resume-intro strong { color: var(--purple-deep); font-weight: 800; }
+
+/* ── 학력 타임라인 */
+.resume-timeline { display: flex; flex-direction: column; gap: 1.25rem; }
+.resume-timeline__item {
+  display: flex; gap: 1.25rem; align-items: flex-start;
+  padding: 1.25rem 1.5rem;
+  background: var(--gray); border-radius: 16px;
+  transition: transform .2s;
+}
+.resume-timeline__item:hover { transform: translateX(4px); }
+.resume-timeline__period {
+  font-size: .72rem; font-weight: 800;
+  color: var(--purple-mid); white-space: nowrap;
+  padding-top: 2px;
+}
+.resume-timeline__content h4 { font-size: .95rem; font-weight: 800; margin-bottom: .2rem; }
+.resume-timeline__content p  { font-size: .82rem; color: var(--muted); }
+
+/* ── 교육 카드 */
+.resume-edu-card {
+  background: linear-gradient(135deg, #f5f3ff, #fff0fa);
+  border: 1.5px solid rgba(202,187,233,.4);
+  border-radius: 20px;
+  padding: 1.75rem 2rem;
+}
+.resume-edu-card__header {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; gap: 1rem;
+  margin-bottom: .4rem;
+}
+.resume-edu-card__header h4 { font-size: 1rem; font-weight: 900; }
+.resume-edu-card__date {
+  font-size: .72rem; font-weight: 700;
+  color: var(--purple-mid); white-space: nowrap;
+}
+.resume-edu-card__org {
+  font-size: .82rem; font-weight: 700;
+  color: var(--pink-deep); margin-bottom: .85rem;
+}
+.resume-edu-card__desc { font-size: .88rem; line-height: 1.8; color: var(--muted); }
+
+/* ── 스킬 바 */
+.skill-bars { display: flex; flex-direction: column; gap: 1rem; }
+.skill-bar-item {
+  background: var(--gray); border-radius: 14px;
+  padding: 1rem 1.25rem;
+  transition: background .2s;
+}
+.skill-bar-item:hover { background: rgba(202,187,233,.2); }
+.skill-bar-item__top {
+  display: flex; justify-content: space-between;
+  align-items: center; margin-bottom: .5rem;
+}
+.skill-bar-item__name { font-size: .9rem; font-weight: 800; }
+.skill-bar-item__level {
+  font-size: .68rem; font-weight: 800;
+  padding: .2rem .7rem; border-radius: 50px;
+}
+.level-pink   { background: var(--pink);   color: var(--pink-hot); }
+.level-purple { background: var(--purple); color: var(--purple-deep); }
+.level-blue   { background: var(--blue);   color: #0369a1; }
+.skill-bar-item__track {
+  height: 6px; background: #e5e5e5;
+  border-radius: 3px; overflow: hidden;
+}
+.skill-bar-item__fill {
+  height: 100%; border-radius: 3px;
+  transition: width 1s ease;
+}
+.fill-pink   { background: linear-gradient(90deg, var(--pink-deep), var(--pink-hot)); }
+.fill-purple { background: linear-gradient(90deg, var(--purple-mid), var(--purple-deep)); }
+.fill-blue   { background: linear-gradient(90deg, #38bdf8, #0ea5e9); }
+.skill-bar-item__desc {
+  font-size: .78rem; color: var(--muted);
+  margin-top: .5rem; line-height: 1.6;
+  animation: fadeUp .2s ease;
+}
+
+/* ── 강점 카드 */
+.resume-strengths { display: flex; flex-direction: column; gap: .85rem; }
+.resume-strength-card {
+  display: flex; align-items: flex-start; gap: 1rem;
+  background: var(--gray); border-radius: 14px;
+  padding: 1.1rem 1.4rem;
+  transition: background .2s, transform .2s;
+}
+.resume-strength-card:hover {
+  background: var(--purple);
+  transform: translateX(4px);
+}
+.resume-strength-card__icon { font-size: 1.4rem; flex-shrink: 0; }
+.resume-strength-card h4 { font-size: .88rem; font-weight: 800; margin-bottom: .2rem; }
+.resume-strength-card p  { font-size: .78rem; color: var(--muted); line-height: 1.5; }
+
+/* ── 하단 CTA */
+.resume-cta {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(202,187,233,.3);
+  margin-top: 3rem;
+}
+
+/* ── 반응형 */
+@media (max-width: 900px) {
+  .resume-header { grid-template-columns: 1fr; }
+  .resume-grid   { grid-template-columns: 1fr; }
+  .resume-inner  { padding: 0 1.5rem; }
+}

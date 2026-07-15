@@ -1,0 +1,35 @@
+.scroll-hint {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity .4s;
+}
+.scroll-hint.hidden { opacity: 0; pointer-events: none; }
+.scroll-hint > span {
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: .1em;
+}
+.scroll-hint__arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+.scroll-hint__arrow span {
+  display: block;
+  width: 18px; height: 2px;
+  background: linear-gradient(90deg, var(--pink-deep), var(--purple-mid));
+  border-radius: 1px;
+  animation: arrowBounce 1.2s ease-in-out infinite;
+}
+.scroll-hint__arrow span:nth-child(2) { animation-delay: .15s; }
+.scroll-hint__arrow span:nth-child(3) { animation-delay: .3s; }

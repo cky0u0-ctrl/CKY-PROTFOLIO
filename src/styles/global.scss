@@ -1,0 +1,163 @@
+/* ═══════════════════════════════════════════
+   global.scss — Choi KiYeon Portfolio
+   컬러: #FFCEF3 / #CABBE9 / #FDFDFD / #A1EAFB
+   폰트: Plus Jakarta Sans + JetBrains Mono
+═══════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --pink:        #FFCEF3;
+  --pink-deep:   #FF69B4;
+  --pink-hot:    #E040A0;
+  --purple:      #CABBE9;
+  --purple-mid:  #A855F7;
+  --purple-deep: #7C3AED;
+  --blue:        #A1EAFB;
+  --white:       #FDFDFD;
+  --dark:        #1a1a1a;
+  --muted:       #666;
+  --gray:        #f0f0f0;
+
+  --font: 'Plus Jakarta Sans', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 40px;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font);
+  background: var(--white);
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+button { font-family: var(--font); }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--white); }
+::-webkit-scrollbar-thumb { background: var(--purple); border-radius: 2px; }
+
+/* ── 공통 유틸 */
+.eyebrow {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--muted);
+  margin-bottom: .75rem;
+}
+.grad-pink {
+  background: linear-gradient(135deg, var(--pink-deep), var(--pink-hot));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.grad-purple {
+  background: linear-gradient(135deg, var(--purple-mid), var(--purple-deep));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── 버튼 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: .8rem 2rem;
+  border-radius: 50px;
+  font-family: var(--font);
+  font-size: .9rem;
+  font-weight: 700;
+  border: none;
+  letter-spacing: .01em;
+  transition: transform .2s, box-shadow .2s;
+  text-decoration: none;
+}
+.btn-fill {
+  background: linear-gradient(135deg, var(--pink-deep) 0%, var(--pink-hot) 50%, var(--purple-mid) 100%);
+  color: #fff;
+}
+.btn-fill:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,105,180,.4); }
+.btn-ghost {
+  background: transparent;
+  color: var(--dark);
+  position: relative;
+  z-index: 0;
+}
+.btn-ghost::after {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  background: linear-gradient(#fff,#fff) padding-box,
+    linear-gradient(135deg, var(--pink-deep), var(--purple-mid)) border-box;
+  z-index: -1;
+  pointer-events: none;
+}
+.btn-ghost:hover { color: var(--pink-deep); }
+.btn-pill {
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  color: var(--purple-deep);
+  font-weight: 700;
+}
+
+/* ── pill 태그 */
+.pill {
+  display: inline-block;
+  padding: .3rem .9rem;
+  border-radius: 50px;
+  font-size: .75rem;
+  font-weight: 700;
+}
+.pill-purple { background: var(--purple); color: var(--purple-deep); }
+.pill-pink   { background: var(--pink);   color: var(--pink-hot); }
+.pill-blue   { background: var(--blue);   color: #0369a1; }
+
+/* ── 키프레임 */
+@keyframes floatY {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-18px); }
+}
+@keyframes floatSlow {
+  0%,100% { transform: translateY(0) rotate(-1.5deg); }
+  50%     { transform: translateY(-12px) rotate(1.5deg); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes arrowBounce {
+  0%,100% { opacity: .3; transform: translateY(-4px); }
+  50%     { opacity: 1;  transform: translateY(4px); }
+}
+@keyframes lockPulse {
+  0%,100% { transform: scale(1); }
+  50%     { transform: scale(1.1); }
+}
+@keyframes dotBlink {
+  0%,100% { opacity: .3; }
+  50%     { opacity: 1; background: var(--pink-deep); }
+}
+@keyframes waveAnim {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

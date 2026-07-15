@@ -1,0 +1,22 @@
+.cursor-sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  width: 18px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+}
+.cursor-sparkle__icon {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 1px 3px rgba(168, 85, 247, 0.35));
+  animation: sparkleTwinkle 1.4s ease-in-out infinite;
+}
+.cursor-sparkle__icon path {
+  fill: var(--purple-mid);
+}
+
+@keyframes sparkleTwinkle {
+  0%, 100% { opacity: .55; transform: scale(.85); }
+  50%      { opacity: 1;   transform: scale(1); }
+}

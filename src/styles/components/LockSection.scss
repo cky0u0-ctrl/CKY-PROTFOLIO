@@ -1,0 +1,22 @@
+.section {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 3rem 3rem;
+  overflow: hidden;
+}
+.reveal-section {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.reveal-section--visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 80px 1.5rem 2rem; }
+}
