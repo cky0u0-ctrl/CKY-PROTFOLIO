@@ -1,4 +1,7 @@
-# Choi KiYeon — Web Publisher Portfolio
+👩‍💻 Choi KiYeon — Web Publisher Portfolio
+
+<img width="1913" height="937" alt="최기연포트폴리오오옹" src="https://github.com/user-attachments/assets/1675695b-63d6-41a3-9fec-558d8a02be44" />
+
 
 React 기반 포트폴리오 사이트
 
