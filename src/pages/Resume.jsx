@@ -120,7 +120,7 @@ function Resume() {
                   <div className="resume-timeline__period">2021 – 2024</div>
                   <div className="resume-timeline__content">
                     <h4>경복대학교</h4>
-                    <p>학점 3.6 / 경기도</p>
+                    <p>학점 3.4 / 경기도</p>
                   </div>
                 </div>
                 <div className="resume-timeline__item">
