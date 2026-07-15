@@ -475,6 +475,26 @@
   .about-connect { padding: 3rem 2rem; }
   .about-sidenav { display: none; }
   .bg-text { display: none; }
+
+  .timeline { padding-left: 4.5rem; }
+  .timeline__line { left: 3.2rem; }
+  .timeline__year { left: -4.5rem; font-size: clamp(1.05rem, 4vw, 1.4rem); }
+  .timeline__dot { left: -1.35rem; }
+  .skill-circles { gap: 1.75rem; }
+}
+@media (max-width: 480px) {
+  .about-connect { padding: 2.25rem 1.5rem; }
+  .about-connect__btns { flex-direction: column; align-items: stretch; width: 100%; }
+  .about-connect__btns .btn { text-align: center; justify-content: center; }
+  .about-profile__avatar { width: 140px; height: 175px; }
+  .about-profile__card { padding: 1.5rem; }
+  .about-profile__name strong { font-size: 1.9rem; }
+  .timeline { padding-left: 3.2rem; }
+  .timeline__line { left: 2.2rem; }
+  .timeline__year { left: -3.2rem; font-size: 1rem; }
+  .timeline__dot { left: -1.05rem; width: 11px; height: 11px; }
+  .skill-tabs { gap: .4rem; }
+  .skill-tab { padding: .5rem 1.1rem; font-size: .78rem; }
 }
 
 /* ── pill */

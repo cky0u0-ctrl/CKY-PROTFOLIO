@@ -25,7 +25,7 @@ const PROJECTS = [
     ],
     links: [
       { label: '배포웹', icon: '🌐', href: 'https://laftel-renewal.vercel.app/' },
-      { label: '깃허브', icon: '🐙', href: 'https://github.com/cky0u0-ctrl/Laftel-Renewal' },
+      { label: '깃허브', icon: '💻', href: 'https://github.com/cky0u0-ctrl/Laftel-Renewal' },
       { label: '피그마', icon: '🎨', href: 'https://www.figma.com/design/2m35sbeBNz86jntVwIrBv6/LAFTEL-RENEWAL?m=auto&t=aAjjTGeCx1ahRty5-1' },
       { label: '기획 ppt', icon: '📊', href: 'https://www.figma.com/slides/YutD3KnVhc7fmGFzM2lODf' },
     ],
@@ -39,6 +39,7 @@ const PROJECTS = [
     sub: '케이스티파이 클론 프로젝트 / 5인',
     thumb: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fcasetify-renewal.vercel.app%2F?w=800',
     deployUrl: 'https://casetify-renewal.vercel.app/',
+    demoVideo: 'https://www.youtube.com/embed/68uNTmS8pbg',
     verticalText: 'CASTIFY',
     role: 'UI 디자인 및 프론트엔드 개발',
     period: '2026.04~2026.05',
@@ -59,7 +60,7 @@ const PROJECTS = [
     ],
     links: [
       { label: '배포웹', icon: '🌐', href: 'https://casetify-renewal.vercel.app/' },
-      { label: '깃허브', icon: '🐙', href: 'https://github.com/cky0u0-ctrl/casetify-Renewal' },
+      { label: '깃허브', icon: '💻', href: 'https://github.com/cky0u0-ctrl/casetify-Renewal' },
       { label: '피그마', icon: '🎨', href: 'https://www.figma.com/design/2YMmfdyMZV9nlmkke72mcc/CASTIFT-RENEWAL?node-id=62-16&t=McdUafY7UiZen4d8-1' },
       { label: '기획 ppt', icon: '📊', href: 'https://www.figma.com/slides/oRexVlzy2jOCJMSpj7Ku6N' },
     ],
@@ -89,7 +90,7 @@ const PROJECTS = [
     ],
     links: [
       { label: '배포웹', icon: '🌐', href: 'https://cgv-renewal.vercel.app/' },
-      { label: '깃허브', icon: '🐙', href: 'https://github.com/cky0u0-ctrl/CGV-Renewal' },
+      { label: '깃허브', icon: '💻', href: 'https://github.com/cky0u0-ctrl/CGV-Renewal' },
       { label: '피그마', icon: '🎨', href: 'https://www.figma.com/design/gnPSRWUv8rUO9yHd186rD4/CGV-RENEWAL?t=McdUafY7UiZen4d8-0' },
     ],
     cardBg: 'linear-gradient(135deg,#ff6b6b,#ffa07a)',

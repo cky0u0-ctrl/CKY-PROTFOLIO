@@ -157,5 +157,16 @@
 @media (max-width: 768px) {
   .board-header { flex-direction: column; align-items: flex-start; }
   .board-item { flex-direction: column; }
+  .board-item__right { align-items: flex-start; flex-direction: row; flex-wrap: wrap; gap: .75rem; margin-top: .5rem; }
   .board-inner { padding: 0 1.25rem; }
+  .board-modal__inner { padding: 2rem 1.5rem; }
+}
+@media (max-width: 480px) {
+  .board-form { padding: 1.5rem 1.25rem; }
+  .board-header__title { font-size: 2.2rem; }
+  .board-write-btn { margin-left: 0; width: 100%; justify-content: center; }
+  .board-filter { flex-direction: column; align-items: stretch; }
+  .board-modal { padding: 1rem; }
+  .board-modal__inner { padding: 1.75rem 1.25rem; border-radius: 20px; }
+  .board-modal__title { font-size: 1.3rem; }
 }

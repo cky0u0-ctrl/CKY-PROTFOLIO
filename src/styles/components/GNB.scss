@@ -115,6 +115,12 @@
   .gnb__spacer { display: none; }
   .gnb__list { position: static; transform: none; }
 }
+@media (max-width: 400px) {
+  .gnb { padding: 0 .8rem; }
+  .gnb__list { gap: .7rem; }
+  .gnb__link { font-size: .7rem; }
+  .gnb__link-badge { display: none; }
+}
 
 /* 채용 뱃지 */
 .gnb__link-badge {

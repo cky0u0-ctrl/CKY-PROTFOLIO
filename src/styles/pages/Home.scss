@@ -117,8 +117,30 @@
 @media (max-width:768px) {
   .project-grid { grid-template-columns:repeat(2,minmax(180px,240px)); }
   .contact-page { grid-template-columns:1fr; }
+  #contact { padding:80px 1.5rem 2rem; }
+  .contact-page__title,
+  .contact-page__big { font-size:2.2rem; }
+  .code-card { width:230px; }
+  .code-card__body { font-size:.62rem; padding:.65rem .8rem; }
 }
 @media (max-width:480px) {
   .hero__title { font-size:2rem; }
+  .hero__desc  { font-size:.88rem; }
+  .hero__cta   { flex-direction:column; align-items:stretch; }
+  .hero__cta .btn { text-align:center; justify-content:center; }
   .project-grid { grid-template-columns:minmax(180px,280px); }
+
+  .hero__right { height:260px; }
+  .hero__circle { width:210px;height:210px; }
+  .hero__photo  { width:150px;height:190px; }
+  .hero__headline { top:.25rem; right:-.5rem; }
+  .hero__headline span { font-size:1.3rem; }
+  .code-card { width:190px; bottom:-10px; }
+  .code-card__body { font-size:.56rem; padding:.55rem .65rem; line-height:1.55; }
+  .code-card__filename { font-size:.6rem; }
+
+  .contact-page__title,
+  .contact-page__big { font-size:1.8rem; }
+  .contact-card { padding:1.5rem; }
+  #contact { padding:60px 1.25rem 2rem; }
 }

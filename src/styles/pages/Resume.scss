@@ -235,3 +235,11 @@
   .resume-grid   { grid-template-columns: 1fr; }
   .resume-inner  { padding: 0 1.5rem; }
 }
+@media (max-width: 480px) {
+  .resume-page { padding: 76px 0 3rem; }
+  .resume-inner { padding: 0 1.1rem; }
+  .resume-contact-card { padding: 1.5rem; }
+  .resume-edu-card { padding: 1.25rem 1.5rem; }
+  .resume-cta { flex-direction: column; align-items: stretch; }
+  .resume-cta .btn { text-align: center; justify-content: center; }
+}

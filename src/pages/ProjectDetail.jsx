@@ -64,6 +64,21 @@ function ProjectDetail() {
           </ul>
         </div>
 
+        {/* 시연 영상 */}
+        {project.demoVideo && (
+          <div className="pj-detail__video">
+            <h4 className="pj-detail__video-title">시연 영상</h4>
+            <div className="pj-video-frame">
+              <iframe
+                src={project.demoVideo}
+                title={`${project.name} 시연 영상`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        )}
+
         <div className="pj-detail__back">
           <Link to="/#projects" className="btn btn-ghost">← 목록으로</Link>
         </div>
