@@ -5,6 +5,8 @@
 
 React 기반 포트폴리오 사이트
 
+배포사이트 : https://cky-protfolio.vercel.app
+
 ## 기술 스택
 - React 18
 - React Router DOM v6
